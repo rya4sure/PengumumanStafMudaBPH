@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pengumuman Staf Muda BPH</title>
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="snbt.css" />
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<!-- ==================== HALAMAN PENCARIAN ==================== -->
+<div class="container" id="main">
+<div class="box">
+<div class="card">
+
+<div class="row">
+<div class="col">
+<span class="title">PENGUMUMAN STAF MUDA BPH HME</span>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col">
+<p style="color: white;">Masukkan NIM Anda.</p>
+</div>
+</div>
+<div class="row mx-auto m-1" id="error" style="display: none;">
+<div class="col text-center">
+<div class="error" id="error-msg"></div>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<div class="form-group">
+<label>NIM</label>
+<input type="text" class="form-control no-spinners" id="nim" name="nim" placeholder="" maxlength="15" size="15" autofocus autocomplete="off"/>
+<small class="form-text text-muted" style="color: lightgray !important;">Masukkan NIM Anda.</small>
+</div>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col text-center">
+<button type="button" class="btn btn-primary" id="search">Lihat Hasil</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ==================== HALAMAN HASIL (DITERIMA) ==================== -->
+<div id="result" style="display: none;">
+<div class="snpmb-page">
+
+
+<!-- Judul -->
+<h1 class="snpmb-title">PENGUMUMAN STAF MUDA BPH HME</h1>
+
+<!-- Card Utama -->
+<div class="snpmb-card">
+<div class="snpmb-card-inner">
+<!-- QR Code Section -->
+<div class="snpmb-qr-section">
+<div id="qrcode-container"></div>
+</div>
+
+<!-- Info Section -->
+<div class="snpmb-info-section">
+<table class="snpmb-info-table">
+<tr>
+<td class="info-label">NIM</td>
+<td class="info-colon">:</td>
+<td class="info-value" id="nim-result"></td>
+</tr>
+<tr>
+<td class="info-label">Nama</td>
+<td class="info-colon">:</td>
+<td class="info-value" id="nama-snpmb-result"></td>
+</tr>
+</table>
+
+<div class="snpmb-selamat">
+<p>Selamat! Anda dinyatakan lulus seleksi Staf Muda HME di</p>
+</div>
+
+<table class="snpmb-info-table snpmb-ptn-table">
+<tr>
+<td class="info-label">Departemen</td>
+<td class="info-colon">:</td>
+<td class="info-value-blue" id="departemen-result"></td>
+</tr>
+</table>
+
+
+</div>
+</div>
+
+
+</div>
+
+<!-- Tombol Kembali -->
+<div class="snpmb-back-section">
+<button type="button" class="snpmb-back-btn" id="back">Kembali ke pencarian</button>
+</div>
+</div>
+</div>
+
+<!-- ==================== HALAMAN TIDAK DITEMUKAN ==================== -->
+<div class="container" id="not-found" style="display: none;">
+<div class="box">
+<div class="card">
+<div class="row">
+<div class="col text-center">
+<span class="not-accepted-title">NIM <span id="nim-tidak-ditemukan"></span> TIDAK DITEMUKAN DALAM DATA.</span>
+</div>
+</div>
+<br>
+<br>
+<div class="row">
+<div class="col text-center">
+<button type="button" class="btn btn-secondary" id="back-notfound">Kembali ke pencarian</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
