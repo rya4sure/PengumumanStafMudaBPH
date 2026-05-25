@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pengumuman-stafmuda-bph",
+  "compatibility_date": "2026-05-25",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "Pengumuman Stafmud BPH"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
